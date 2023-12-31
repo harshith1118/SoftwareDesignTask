@@ -18,9 +18,8 @@ LowLevelDesign:
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Class Structure](#class-structure)
-- [Unit Tests](#unit-tests)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ## Features
 
