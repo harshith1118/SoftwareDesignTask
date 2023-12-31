@@ -38,7 +38,7 @@ LowLevelDesign:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/travel-agency-system.git
+   git clone https://github.com/your-harshith118/travel-agency-system.git
 
 
 2.2. Open the project in your preferred Java IDE or text editor.
