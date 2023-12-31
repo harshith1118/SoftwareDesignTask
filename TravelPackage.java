@@ -1,29 +1,24 @@
 package TravelPackage;
-
 import java.util.List;
 import java.util.ArrayList;
 
 class Destination {
     String name;
     List<Activity> activities;
-
     Destination(String name) {
         this.name = name;
         this.activities = new ArrayList<>();
     }
-
     void addActivity(Activity activity) {
         activities.add(activity);
     }
 }
-
 class Activity {
     String name;
     String description;
     double cost;
     int capacity;
     Destination destination;
-
     Activity(String name, String description, double cost, int capacity, Destination destination) {
         this.name = name;
         this.description = description;
@@ -31,11 +26,9 @@ class Activity {
         this.capacity = capacity;
         this.destination = destination;
     }
-
     boolean hasAvailableSpace() {
         return capacity > 0;
     }
-
     void signUp(Passenger passenger) {
         if (hasAvailableSpace() && passenger.hasSufficientBalance(cost)) {
             passenger.deductBalance(cost);
@@ -51,7 +44,6 @@ class Passenger {
     double balance;
     PassengerType type;
     List<Activity> activities;
-
     Passenger(String name, int passengerNumber, PassengerType type) {
         this.name = name;
         this.passengerNumber = passengerNumber;
@@ -59,11 +51,9 @@ class Passenger {
         this.activities = new ArrayList<>();
         this.balance = type == PassengerType.GOLD ? 0.9 : 1.0; // Initialize balance with discount for gold passengers
     }
-
     boolean hasSufficientBalance(double cost) {
         return balance >= cost;
     }
-
     void deductBalance(double cost) {
         balance -= cost;
     }
